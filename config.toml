@@ -17,7 +17,7 @@ preserveTaxonomyNames = true
     mainpagedesc = "Hello world. This blog is under construction. Please stand  by"
 
     # The name to display in the copyright section in the footer
-    copyrightname = "Garrett Bataglia"
+    copyrightname = "Garrett Battaglia"
 
     # The url to use as link in the copyright name in the footer. Leave empty to use none.
     #copyrighturl = "http://jmf-portfolio.netlify.com"
@@ -39,7 +39,17 @@ preserveTaxonomyNames = true
 
     # Enables or disables the second flyby cursor. Default is false.
     loadonepass = true
+[params.copyright]
+    # The name to display in the copyright section in the footer
+    name = "Garrett Battaglia"
 
+    # The url to use as link in the copyright name in the footer. Leave empty to use none.
+    #url = "http://jmf-portfolio.netlify.com"
+
+    prefix = "[hugo.386 theme by Max le Fou](https://gitlab.com/maxlefou/hugo.386)"
+
+    suffix = "Text is available under [Creative Commons Attribution 4.0 International License ![CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)"
+  
 [menu]
   # This displays buttons in the navbar to access your contents
   [[menu.main]]
