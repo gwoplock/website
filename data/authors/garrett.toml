@@ -1,0 +1,12 @@
+id = "garrett"
+
+[email]
+username = "garrett"
+host = "garrettbattaglia.com"
+
+[name]
+display = "Garrett Battaglia"
+
+[social]
+twitter = "gwoplock"
+github = "gwoplock"
