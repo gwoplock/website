@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <title>Tags on Garrett Battaglia</title>
+    <link>http://garrettbattaglia.com/tags/</link>
+    <description>Recent content in Tags on Garrett Battaglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Jun 2020 15:22:27 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://garrettbattaglia.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>test</title>
-      <link>http://example.org/tags/test/</link>
+      <link>http://garrettbattaglia.com/tags/test/</link>
       <pubDate>Wed, 10 Jun 2020 15:22:27 -0500</pubDate>
       
-      <guid>http://example.org/tags/test/</guid>
+      <guid>http://garrettbattaglia.com/tags/test/</guid>
       <description></description>
     </item>
     
