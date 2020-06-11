@@ -6,19 +6,9 @@
     <description>Recent content in Categories on Garrett Battaglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://garrettbattaglia.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>blog</title>
-      <link>http://garrettbattaglia.com/categories/blog/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://garrettbattaglia.com/categories/blog/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
