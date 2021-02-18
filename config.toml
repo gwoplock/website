@@ -1,6 +1,6 @@
 baseURL = "http://garrettbattaglia.com/"
 languageCode = "en-us"
-title = "Garrett Battaglia"
+title = "Gwoplock's Blog"
 theme = "hugo.386"
 publishdir = "docs"
 
