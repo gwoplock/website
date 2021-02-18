@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Garrett Battaglia</title>
-    <link>http://garrettbattaglia.com/</link>
-    <description>Recent content on Garrett Battaglia</description>
+    <title>Texas on Garrett Battaglia</title>
+    <link>http://garrettbattaglia.com/tags/texas/</link>
+    <description>Recent content in Texas on Garrett Battaglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Feb 2021 08:17:36 -0600</lastBuildDate><atom:link href="http://garrettbattaglia.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 08:17:36 -0600</lastBuildDate><atom:link href="http://garrettbattaglia.com/tags/texas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The 2021 Texas power outage is a nation wide problem</title>
       <link>http://garrettbattaglia.com/post/texas-power/</link>
@@ -14,15 +14,6 @@
       
       <guid>http://garrettbattaglia.com/post/texas-power/</guid>
       <description>Let me preface this with an explanation. Over the last few days I read online people saying that Texas&#39; power outages had been caused by Texas being on it&amp;rsquo;s own grid. The deregulation. Not following national standards. That had Texas been connected to the Eastern Interconnection or the Western Interconnection none of this would have happened. But nobody could posted a single requirement or any evidence of this claim. So I went looking and instead of finding requirements, I found a nation wide problem with winterization.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://garrettbattaglia.com/about/</link>
-      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      
-      <guid>http://garrettbattaglia.com/about/</guid>
-      <description>coming soon</description>
     </item>
     
   </channel>

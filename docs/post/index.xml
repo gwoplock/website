@@ -6,15 +6,14 @@
     <description>Recent content in Posts on Garrett Battaglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2020 21:12:56 -0500</lastBuildDate><atom:link href="http://garrettbattaglia.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 08:17:36 -0600</lastBuildDate><atom:link href="http://garrettbattaglia.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linkers, do they do things, what do they do, lets find out</title>
-      <link>http://garrettbattaglia.com/post/linkers/</link>
-      <pubDate>Fri, 26 Jun 2020 21:12:56 -0500</pubDate>
+      <title>The 2021 Texas power outage is a nation wide problem</title>
+      <link>http://garrettbattaglia.com/post/texas-power/</link>
+      <pubDate>Thu, 18 Feb 2021 08:17:36 -0600</pubDate>
       
-      <guid>http://garrettbattaglia.com/post/linkers/</guid>
-      <description>If you write C or C++ chances are you&amp;rsquo;ve used a makefile a time or two and there is always a rule to take all the object files and combine them into the final executable. usually something along the lines of gcc -o output foo1.o foo2.o foo3.o. To answer what that&amp;rsquo;s doing we have to back up to what an object file is and how it is made.
-To understand what an object file is lets first talk about compilers.</description>
+      <guid>http://garrettbattaglia.com/post/texas-power/</guid>
+      <description>Let me preface this with an explanation. Over the last few days I read online people saying that Texas&#39; power outages had been caused by Texas being on it&amp;rsquo;s own grid. The deregulation. Not following national standards. That had Texas been connected to the Eastern Interconnection or the Western Interconnection none of this would have happened. But nobody could posted a single requirement or any evidence of this claim. So I went looking and instead of finding requirements, I found a nation wide problem with winterization.</description>
     </item>
     
   </channel>

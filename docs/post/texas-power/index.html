@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Garrett Battaglia</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="http://garrettbattaglia.com//favicon.ico">
+    <link rel="canonical" href="http://garrettbattaglia.com/">
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="http://garrettbattaglia.com/">Garrett Battaglia</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                        
+                            <li>
+                                <a href="/about/">
+                                    
+                                    <span>About</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="/post/index.html">
+                                    
+                                    <span>All posts</span>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>The 2021 Texas power outage is a nation wide problem - Thu, Feb 18, 2021</h1>
+    </div>
+    <p class="lead">History is bound to repeat itself and it has almost every year</p>
+    <p>Let me preface this with an explanation. Over the last few days I read online people saying that Texas' power outages had been caused by Texas being on it&rsquo;s own grid. The deregulation. Not following national standards. That had Texas been connected to the Eastern Interconnection or the Western Interconnection none of this would have happened. But nobody could posted a single requirement or any evidence of this claim. So I went looking and instead of finding requirements, I found a nation wide problem with winterization. As one other note, I am not an expert in the grid or electricity, I am a software developer and this is my best interpretation of the requirements I could find.</p>
+<p>Lets start off with how the some electrical grid works in the US. There are 3 interconnections, the Eastern Interconnection, the Western Interconnection and the Texas Interconnect. Each of these interconnections operate in (near) isolation with their own frequency, voltage and phase. However, there are several high voltage DC interconnects (HVDC or DC-DC) between them. In each of these interconnections there is one (or more in the east) grid operator, like ERCOT in Texas. These grid operators manage the generation and load acting as almost a electric clearing. They are also responsible for keeping voltage and frequency within range and directing distributors (like ONCOR in north Texas) to shed load during Electrical Emergency Alerts (EEA). An important thing to note for later, from the best I can tell the different grid operators in the Eastern Interconnect share power in an &ldquo;non-firm, as-available basis&rdquo;.</p>
+<p>Now what happened at starting 12:30 AM February 15? The long and short of it is an estimated 34GW of generation went offline in about 2 hours[1]. Looking at ERCOT&rsquo;s tweets [2,3,4], generation was starting to have an issue at 00:17:45 and some load needed to be shed and ERCOT issued a EEA1. In the February EEA tools document[5] EEA1 can open up around 1.6GW of &ldquo;peeker&rdquo; generation and importation from the Eastern and Western Interconnections. But by 1:12:06 that wasn&rsquo;t enough and additional load had to be shed and they issued EEA2 shedding another 1.6GW. But just a few minutes later the house came crashing down and at 1:25:40 the EEA3 was issued. In addition to starting rolling blackouts to shed load this frees another .1-.2GW of load.</p>
+<p>The 34GW of generation lost was from every fuel source used. Most of it was frozen-off natural gas (gas) wells, some of it was frozen wind turbines, solar panels had snow on them and even a nuclear plant had to go offline due to issues with feedwater pressure sensing issues related to the cold. So what do the North American Electric Reliability Corporation (NERC) standards say about any of these? Not much.</p>
+<p>Lets start by looking at the easiest to understand, wind turbines. On september 12, 2012 NERC published a Lesson Learned document talking about Texas&rsquo;s issues with some of the wind farms freezing in extreme winter weather[6]. According to the document, low temperature, high winds and wind chills, ice and snow (predicted over a week beforehand) over 4 days brought the generation facility down to just 25% capacity. The facility did have a SOP for dealing with icing conditions and that was implemented. However the facility never defined it&rsquo;s minimum operating temperature. However, when lightning knocked out some of the sensing equipment like anemometers the turbines had to stop for safety. The repair crews couldn&rsquo;t immediately get to the turbines and they had to sit, this gave the oil a chance to cool off and partly freeze. When the turbines were returned to service they tripped back off on high oil pressure. Eventually after working with the manufacturer they were able to safely heat the oil and restart the turbines. One of the big lessons from this was to get the cold weather packs for wind turbines and watch the oil temperature. You&rsquo;d think that would be the end of it, but no, in 2019 in the midwest due to very low temperatures around -21 wind turbines failed. Again the cold weather package hadn&rsquo;t been purchased and was one of the root causes of the failure[7].</p>
+<p>The nuclear plant&rsquo;s sensing problems had happened before too. In Texas, in 2011. Although it wasn&rsquo;t a nuclear plant I could find several documents on NERC&rsquo;s website citing cold weather and sensor issues [8,9]. This repeated in 2018 in the south east[10].</p>
+<p>Now let&rsquo;s talk about natural gas. It is my understanding that much of the natural gas fired facilities that had issues was due to low gas supplies. In 2012 NERC warned of the interconnectivity of natural gas and electric[11]. Natural gas coming out of the ground has a naturally high water content. In sub freezing temperatures and in improperly winterized wells this water can freeze in the extraction equipment creating whats know as a freeze-off. Once wells start freezing off businesses, residential customers, and powerplants all run off the same dwindling supply. Natural gas companies will prioritize residential customers as needed and will cut businesses and powerplants. This obviously creates issues in electrical generation. Much of the gas generation loss was due to under pressure conditions at the generation site. When generation sites detect this kind of fault they are brought offline for safety. This is exactly what happened this year. But it has happened many, many times before</p>
+<p>The most resent time I could find this happened was in 2018 in the south east[10]. Starting on January 18th 2018 a large area in the south east US experienced unusually cold weather. Due to this 183 generation facilities went offline or greatly reduced output. At it&rsquo;s peak there was nearly 30GW of production lost. This caused several grid operators to issue EEAs and begin rolling blackouts. In the &ldquo;event area&rdquo; 14% of the failures could be directly attributed to the cold weather. And another 30% could be indirectly linked to weather, including mechanical failures know to happen in cold weather and gas supply issues. NERC found that more than 33% of the failed powerplants didn&rsquo;t have a winterization plan. Why didn&rsquo;t these plants have a winterization plan? It wasn&rsquo;t required[10,12].</p>
+<p>This wouldn&rsquo;t be so bad if this was the first time it happened, it wasn&rsquo;t even the second time it happened. In 2014 a polar vortex hit the US. bringing temperatures well below normal. During this event 55% of the outages were at gas power plants and in all 90GW of generation was lost[13].</p>
+<p>The first report I could find was from the 2011 winter event in Texas[14]. A very strong cold front hit Texas (and other parts of the south central US) bringing temperatures below freezing for over 4 days and winds over 30 MPH. Leading up to the ERCOT and other grid operators in surrounding areas felt that there wouldn&rsquo;t need rolling blackouts. At the beginning of the event ERCOT had 3.1GW of reserve, nearly 1GW over the minimum required. However, over the next 2 days ERCOT lost nearly 30GW of production in 193 generation facilities. ERCOT was able to stabilize the grid with rolling blackouts and the other methods EEAs bring available[5]. Other grids suffered problems as well, EPE (El Passo) and SRP (Arizona) lost nearly 1.4GW due to cold weather. Another issue in ERCOT&rsquo;s region was nearly 50% of the &ldquo;black start&rdquo; facilities were either down for scheduled maintenance or failed on startup. One of the main causes again was the loss of gas during this blackout period 14.8 Bcf of natural gas production was lost due to freeze-offs, electrical outages (ironically) and customer curtailments. following the previous equivalent storm in 1989 the PUCT (Public Utility Commission of Texas) issued several recommendations and guidelines for winterization of power plants and gas wells. However, due to the infrequency of these storms the implementation lacked. With many of the same facilities that failed in the the 89 failed in 2011 and I believe these same sites failed again in 2021. Interestingly the NERC found that it is quite possible that gas production in these unusually cold conditions may be impossible.</p>
+<p>So what has been done since 2011? Not a whole lot. A request for a new standard was issued to NERC in late 2012 however a few months later is was denied.[15] Also in 2012 NERC put out a set of guidelines for developing a plan for winter weather[16]. In 2017 NERC put out a special reliability report on the relationship between gas and electricity[17]. Finally after the 2018 event NERC started another standard request that was approved, however it wont be finalized until late 2021[18,19,20]. ERCOT actually has more restrictive rules from what I can tell in their Generator Winter Weatherization Workshop[21]. All generation stations must have plans for emergencies, address abnormal weather, critical failure points, weather design limits, alternitive fuels and testing[21,22]. ERCOT reports that there were 80 spot checks done in the 2019/2020 season with 71 being gas plants and 6 being black start gas plants. 23 had to improve and would be reinspected in early 2021 the rest passed.</p>
+<p>The issue of extreme cold weather and electrical outages is a national issue that needs to be addressed. However, after repeated failings it hasn&rsquo;t really been addressed. Hopefully with the new NERC requirements and the Texas legislature in session progress can be made.</p>
+<hr>
+<p>[1] <a href="http://www.ercot.com/news/releases/show/225244">http://www.ercot.com/news/releases/show/225244</a><br>
+[2] <a href="https://twitter.com/ERCOT_ISO/status/1361197991659503618">https://twitter.com/ERCOT_ISO/status/1361197991659503618</a><br>
+[3] <a href="https://twitter.com/ERCOT_ISO/status/1361211669788176384">https://twitter.com/ERCOT_ISO/status/1361211669788176384</a><br>
+[4] <a href="https://twitter.com/ERCOT_ISO/status/1361215084010352644">https://twitter.com/ERCOT_ISO/status/1361215084010352644</a><br>
+[5] <a href="http://www.ercot.com/content/wcm/lists/219692/EEA_Tools_One_Pager_Winter_2021_2-13-2021.pdf">http://www.ercot.com/content/wcm/lists/219692/EEA_Tools_One_Pager_Winter_2021_2-13-2021.pdf</a><br>
+[6] <a href="https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20120901_Wind_Farm_Winter_Storm_Issues.pdf">https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20120901_Wind_Farm_Winter_Storm_Issues.pdf</a><br>
+[7] <a href="https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20200601_Unanticipated_Wind_Generation_Cutoffs_during_a_Cold_Weather_Event.pdf">https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20200601_Unanticipated_Wind_Generation_Cutoffs_during_a_Cold_Weather_Event.pdf</a><br>
+[8] <a href="https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20111001_Plant_Instrument_and_Sending_Equipment_Freezing_Due_to_Heat_Trace_and_Insulation_Failures.pdf">https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20111001_Plant_Instrument_and_Sending_Equipment_Freezing_Due_to_Heat_Trace_and_Insulation_Failures.pdf</a><br>
+[9] <a href="https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20110902_Adequate_Maintenance_and_Inspection_of_Generator_Freeze_Protection.pdf">https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20110902_Adequate_Maintenance_and_Inspection_of_Generator_Freeze_Protection.pdf</a><br>
+[10] <a href="https://www.ferc.gov/sites/default/files/2020-04/07-18-19-ferc-nerc-report.pdf">https://www.ferc.gov/sites/default/files/2020-04/07-18-19-ferc-nerc-report.pdf</a><br>
+[11] <a href="https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20120905_Gas_and_Electricity_Interdependency.pdf">https://www.nerc.com/pa/rrm/ea/Lessons%20Learned%20Document%20Library/LL20120905_Gas_and_Electricity_Interdependency.pdf</a><br>
+[12] <a href="https://www.nerc.com/comm/OC_Reliability_Guidelines_DL/Reliability_Guideline_Generating_Unit_Winter_Weather_Readiness_v3_Final.pdf">https://www.nerc.com/comm/OC_Reliability_Guidelines_DL/Reliability_Guideline_Generating_Unit_Winter_Weather_Readiness_v3_Final.pdf</a><br>
+[13] <a href="https://www.nerc.com/pa/rrm/ea/ColdWeatherTrainingMaterials/Polar_Vortex_Review_2014.pdf">https://www.nerc.com/pa/rrm/ea/ColdWeatherTrainingMaterials/Polar_Vortex_Review_2014.pdf</a><br>
+[14] <a href="https://www.ferc.gov/sites/default/files/2020-04/08-16-11-report.pdf">https://www.ferc.gov/sites/default/files/2020-04/08-16-11-report.pdf</a><br>
+[15] <a href="https://www.nerc.com/pa/Stand/Pages/Project2013-01_Cold_Weather.aspx">https://www.nerc.com/pa/Stand/Pages/Project2013-01_Cold_Weather.aspx</a><br>
+[16] <a href="https://www.nerc.com/comm/OC_Reliability_Guidelines_DL/Reliability_Guideline_Generating_Unit_Winter_Weather_Readiness_v3_Final.pdf">https://www.nerc.com/comm/OC_Reliability_Guidelines_DL/Reliability_Guideline_Generating_Unit_Winter_Weather_Readiness_v3_Final.pdf</a><br>
+[17] <a href="https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_SPOD_11142017_Final.pdf">https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_SPOD_11142017_Final.pdf</a><br>
+[18] <a href="https://www.nerc.com/pa/Stand/Project%20201906%20Cold%20Weather%20DL/EOP-011-2_Clean_01272021.pdf">https://www.nerc.com/pa/Stand/Project%20201906%20Cold%20Weather%20DL/EOP-011-2_Clean_01272021.pdf</a><br>
+[19] <a href="https://www.nerc.com/pa/Stand/Project%20201906%20Cold%20Weather%20DL/IRO-010-4_Clean_01272021.pdf">https://www.nerc.com/pa/Stand/Project%20201906%20Cold%20Weather%20DL/IRO-010-4_Clean_01272021.pdf</a><br>
+[20] <a href="https://www.nerc.com/pa/Stand/Project%20201906%20Cold%20Weather%20DL/TOP-003-5_Clean_01272021.pdf">https://www.nerc.com/pa/Stand/Project%20201906%20Cold%20Weather%20DL/TOP-003-5_Clean_01272021.pdf</a><br>
+[21] <a href="http://www.ercot.com/content/wcm/key_documents_lists/210163/7._ERCOT_Weatherization_Workshop_2020_2021_Final.pdf">http://www.ercot.com/content/wcm/key_documents_lists/210163/7._ERCOT_Weatherization_Workshop_2020_2021_Final.pdf</a><br>
+[22] <a href="https://www.puc.texas.gov/agency/rulesnlaws/subrules/electric/25.53/25.53.pdf">https://www.puc.texas.gov/agency/rulesnlaws/subrules/electric/25.53/25.53.pdf</a></p>
+
+    <h4><a href="http://garrettbattaglia.com/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+
+    <a href="https://gitlab.com/maxlefou/hugo.386">hugo.386 theme by Max le Fou</a> | 
+
+&copy; 
+
+    Garrett Battaglia
+
+<span id="thisyear">2020</span>
+
+    | Text is available under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License <img src="https://licensebuttons.net/l/by/4.0/80x15.png" alt="CC BY 4.0"></a>
+
+
+        | Built on <a href="//gohugo.io" target="_blank">Hugo</a>
+</p>
+    <p class="text-center">
+        
+        <a href="https://twitter.com/gwoplock">Twitter</a> 
+        <a href="https://linkedin.com/in/gwoplock">Linkedin</a> 
+        <a href="https://github.com/gwoplock">GitHub</a> 
+        <a href="https://gitlab.com/gwoplock">GitLab</a>
+    </p>
+</footer>
+
+</body><link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: false ,
+        onePass: true , 
+        speedFactor: 3 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></html>
