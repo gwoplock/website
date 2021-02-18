@@ -64,3 +64,4 @@ The issue of extreme cold weather and electrical outages is a national issue tha
 [22] https://www.puc.texas.gov/agency/rulesnlaws/subrules/electric/25.53/25.53.pdf   
 [23] https://www.nerc.com/pa/Stand/Project%20201906%20Cold%20Weather%20DL/2019-06_Cold_Weather_SAR_10042019.pdf  
 [24] https://www.nerc.com/pa/Stand/Pages/Project%202019-06%20Cold%20Weather.aspx
+
