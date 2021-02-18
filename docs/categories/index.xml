@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Gwoplock&#39;s Blog</title>
-    <link>http://garrettbattaglia.com/categories/</link>
+    <link>https://garrettbattaglia.com/categories/</link>
     <description>Recent content in Categories on Gwoplock&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Garrett Battaglia</copyright>
-    <lastBuildDate>Thu, 18 Feb 2021 08:17:36 -0600</lastBuildDate><atom:link href="http://garrettbattaglia.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 08:17:36 -0600</lastBuildDate><atom:link href="https://garrettbattaglia.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Electricity</title>
-      <link>http://garrettbattaglia.com/categories/electricity/</link>
+      <link>https://garrettbattaglia.com/categories/electricity/</link>
       <pubDate>Thu, 18 Feb 2021 08:17:36 -0600</pubDate>
       
-      <guid>http://garrettbattaglia.com/categories/electricity/</guid>
+      <guid>https://garrettbattaglia.com/categories/electricity/</guid>
       <description></description>
     </item>
     

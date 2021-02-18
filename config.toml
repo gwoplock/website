@@ -1,4 +1,4 @@
-baseURL = "http://garrettbattaglia.com/"
+baseURL = "https://garrettbattaglia.com/"
 languageCode = "en-us"
 title = "Gwoplock's Blog"
 theme = "terminal"
