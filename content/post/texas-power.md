@@ -3,7 +3,7 @@ title: "The 2021 Texas power outage is a nation wide problem"
 date: 2021-02-18T08:17:36-06:00
 draft: false
 description: "History is bound to repeat itself and it has almost every year"
-categories: "Electricity"
+categories: ["Electricity"]
 tags: ["Texas"]
 ---
 
