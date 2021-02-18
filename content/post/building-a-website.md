@@ -3,7 +3,9 @@ title: "Building a Website as a Firmware Developer"
 date: 2020-06-10
 description: "The struggles of building a website without any knowledge"
 author: "Garrett"
-draft: false
+draft: true
+categories: "Programming"
+tags: ["webdev"]
 ---
 
 If you haven't guessed from the title I'm not well versed in building websites. In fact, this is really the first website I've made "from scratch" and even this isn't really a from-scratch website.

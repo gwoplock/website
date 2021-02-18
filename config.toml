@@ -14,7 +14,7 @@ preserveTaxonomyNames = true
     mainpagesubtitle = "Welcome to the early 90s!" 
 
     # The description of your website. It will be displayed in the home page
-    mainpagedesc = "Hello world. This blog is under construction. Please stand  by"
+    mainpagedesc = "Hello world. This blog is under construction. Please stand by"
 
     # The name to display in the copyright section in the footer
     copyrightname = "Garrett Battaglia"
@@ -35,7 +35,7 @@ preserveTaxonomyNames = true
     loadfastload = false
 
     # Sets the speed for the page loading effect. Default is 1.0.
-    loadspeedfactor = 1.0
+    loadspeedfactor = 3.0
 
     # Enables or disables the second flyby cursor. Default is false.
     loadonepass = true

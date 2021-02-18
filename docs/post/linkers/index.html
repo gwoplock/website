@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Garrett Battaglia</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="http://garrettbattaglia.com//favicon.ico">
+    <link rel="canonical" href="http://garrettbattaglia.com/">
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="http://garrettbattaglia.com/">Garrett Battaglia</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                        
+                            <li>
+                                <a href="/about/">
+                                    
+                                    <span>About</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="/post/index.html">
+                                    
+                                    <span>All posts</span>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>Linkers, do they do things, what do they do, lets find out - Fri, Jun 26, 2020</h1>
+    </div>
+    <p class="lead">Linkers: the most important yet under appreciated part of compiling</p>
+    <p>If you write C or C++ chances are you&rsquo;ve used a makefile a time or two and there is always a rule to take all the object files and combine them into the final executable. usually something along the lines of <code>gcc -o output foo1.o foo2.o foo3.o</code>. To answer what that&rsquo;s doing we have to back up to what an object file is and how it is made.</p>
+<p>To understand what an object file is lets first talk about compilers. To compile a file you&rsquo;d run a command like <code>gcc -c foo1.c</code> and that would produce a <code>.o</code> file or an object file. C and C++ are compiled with whats called a single pass compiler and this is what drives both the need for header files and the need for object files and linking. In the compiler there are a few distinct steps. First the preprocessor is run to produce the real source file. If you&rsquo;re unfamiliar with C or C++ the preprocessor basically does fill in the blank with your source files. For example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#define PI 3.14159
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//SOME CODE
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">auto</span> area <span style="color:#f92672">=</span> PI <span style="color:#f92672">*</span> r <span style="color:#f92672">*</span> r;
+<span style="color:#f92672">//</span>MORE CODE</code></pre></div>
+<p>would preprocess into</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//SOME CODE
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">auto</span> area <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14159</span> <span style="color:#f92672">*</span> r <span style="color:#f92672">*</span> r;
+<span style="color:#f92672">//</span>MORE CODE</code></pre></div>
+<p>I will hopefully have a blog post about the preprocessor and compiler coming &ldquo;soon&rdquo;.</p>
+<p>Once the preprocessor is run and the final source file is made. The lexer and parser will come in and break the source file apart. The lexer will get tokens or lexemes from the source file like a variable name or an operator or anything that can be defined with regex and give them to the parser. The parser will then use those lexemes to build whats called an abstract syntax tree. What that is isn&rsquo;t important right now but if you care to learn more that should also be in the parser and compiler blog post. Eventually the parser will come across a symbol, a function or variable name.</p>
+<p>For right now lets look at a simple code example.</p>
+<p><code>foobar.c</code><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//from included file &#34;foobar.h&#34;
+</span><span style="color:#75715e">//some code
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> foo;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">bar</span>(<span style="color:#66d9ef">int</span>);
+<span style="color:#75715e">//more code
+</span><span style="color:#75715e">//end file &#34;foobar.h&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//even more code
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> foo <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">bar</span>(<span style="color:#66d9ef">int</span> wat){
+    <span style="color:#66d9ef">return</span> wat;
+}
+<span style="color:#f92672">//</span>the rest of the code</code></pre></div></p>
+<p><code>barfoo.c</code><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//from included file &#34;foobar.h&#34;
+</span><span style="color:#75715e">//some code
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> foo;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">bar</span>(<span style="color:#66d9ef">int</span>);
+<span style="color:#75715e">//more code
+</span><span style="color:#75715e">//end file &#34;foobar.h&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//code
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">whatever</span>(){
+    <span style="color:#66d9ef">return</span> foo <span style="color:#f92672">+</span> bar(foo);
+}
+<span style="color:#f92672">//</span>code</code></pre></div></p>
+<p>These symbols are the reason for linking and headers.</p>
+
+    <h4><a href="http://garrettbattaglia.com/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+
+    <a href="https://gitlab.com/maxlefou/hugo.386">hugo.386 theme by Max le Fou</a> | 
+
+&copy; 
+
+    Garrett Battaglia
+
+<span id="thisyear">2020</span>
+
+    | Text is available under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License <img src="https://licensebuttons.net/l/by/4.0/80x15.png" alt="CC BY 4.0"></a>
+
+
+        | Built on <a href="//gohugo.io" target="_blank">Hugo</a>
+</p>
+    <p class="text-center">
+        
+        <a href="https://twitter.com/gwoplock">Twitter</a> 
+        <a href="https://linkedin.com/in/gwoplock">Linkedin</a> 
+        <a href="https://github.com/gwoplock">GitHub</a> 
+        <a href="https://gitlab.com/gwoplock">GitLab</a>
+    </p>
+</footer>
+
+</body><link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: false ,
+        onePass: true , 
+        speedFactor: 3 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></html>

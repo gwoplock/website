@@ -5,10 +5,6 @@
     <link>http://garrettbattaglia.com/tags/</link>
     <description>Recent content in Tags on Garrett Battaglia</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="http://garrettbattaglia.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="http://garrettbattaglia.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

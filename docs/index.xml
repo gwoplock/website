@@ -5,22 +5,7 @@
     <link>http://garrettbattaglia.com/</link>
     <description>Recent content on Garrett Battaglia</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://garrettbattaglia.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Building a Website as a Firmware Developer</title>
-      <link>http://garrettbattaglia.com/post/building-a-website/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://garrettbattaglia.com/post/building-a-website/</guid>
-      <description>If you haven&amp;rsquo;t guessed from the title I&amp;rsquo;m not well versed in building websites. In fact, this is really the first website I&amp;rsquo;ve made &amp;ldquo;from scratch&amp;rdquo; and even this isn&amp;rsquo;t really a from-scratch website.
-This adventure started when a friend, John, built a site to house his blog. I had wanted to start blogging but for one reason or another, I wouldn&amp;rsquo;t. Id open medium or dev.to or whatever log in and look at the blank page and freeze.</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="http://garrettbattaglia.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>http://garrettbattaglia.com/about/</link>

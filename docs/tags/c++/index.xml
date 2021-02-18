@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Garrett Battaglia</title>
-    <link>http://garrettbattaglia.com/post/</link>
-    <description>Recent content in Posts on Garrett Battaglia</description>
+    <title>C&#43;&#43; on Garrett Battaglia</title>
+    <link>http://garrettbattaglia.com/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Garrett Battaglia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2020 21:12:56 -0500</lastBuildDate><atom:link href="http://garrettbattaglia.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jun 2020 21:12:56 -0500</lastBuildDate><atom:link href="http://garrettbattaglia.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linkers, do they do things, what do they do, lets find out</title>
       <link>http://garrettbattaglia.com/post/linkers/</link>
